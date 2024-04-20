@@ -23,7 +23,7 @@ def get_last_n_year_info(author_a, current_year, n=5):
         pub_year = int(publication['bib']['pub_year']) 
       except:
         print(" the publication metadata doesnt have year info lets anyway add this in the list and substitue it with current year -- this is a hack")
-        pub_year = current_year
+        pub_year = current_year + n + 5
           
       if current_year - pub_year <= n:# this filters based on year
           jj+= 1
